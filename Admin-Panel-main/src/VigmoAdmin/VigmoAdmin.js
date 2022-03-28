@@ -36,19 +36,19 @@ const VigmoAdmin = (params) => {
                 permissions === 'ROLE_ADMIN' ? (
                     <Resource name="users" list={UsersList} edit={UsersEdit} create={UsersCreate} icon={UserIcon} />
                 ) : null,
-                
+
                 permissions === 'ROLE_ADMIN' ? (
                     <Resource name="consultation_hours" list={ConsultationHoursList} edit={ConsultationHoursEdit} create={ConsultationHoursCreate} icon={ConsultationHourIcon} />
                 ) : null,
-                
+
                 permissions === 'ROLE_ADMIN' ? (
                     <Resource name="availabilities" list={AvailabilitiesList} edit={AvailabilitiesEdit} create={AvailabilitiesCreate} icon={AvailablilityIcon} />
                 ) : null,
-            
+
                 <Resource name="screens" list={ScreensList} edit={ScreensEdit} create={ScreensCreate} icon={ScreenIcon} />,
                 <Resource name="slideshows" list={SlideshowList} edit={SlideshowEdit} create={SlideshowCreate} icon={SlideshowIcon} />,
                 <Resource name="slideshow_variables" list={SlideshowVariablesList} edit={SlideshowVariablesEdit} create={SlideshowVariablesCreate} icon={SlideshowVariableIcon} />,
-    
+
                 <Resource name="rss_slides" list={RssSlidesList} edit={RssSlidesEdit} create={RssSlidesCreate} icon={RssSlideIcon} />,
                 <Resource name="media_slides" list={MediaSlidesList} edit={MediaSlidesEdit} create={MediaSlidesCreate} icon={MediaSlideIcon} />,
                 <Resource name="text_slides" list={TextSlidesList} edit={TextSlidesEdit} create={TextSlidesCreate} icon={TextSlideIcon} />,
