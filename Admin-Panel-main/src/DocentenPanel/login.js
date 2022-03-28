@@ -1,63 +1,32 @@
-import decodeJwt from 'jwt-decode';
+function checkCredentials() {
+    let userName = document.getElementById("userName").value;
+    let passWord = document.getElementById("password").value;
+    document.getElementById("showUsername").innerHTML = userName;
+    document.getElementById("showPassword").innerHTML = passWord;
+    // let request = new XMLHttpRequest()
+    // request.open('POST', 'http://localhost:8080/Api_war/authenticate', true)
 
-export default {
-    login: ({ username, password }) => {
-        const request = new Request(process.env.REACT_APP_AUTH_URL, {
-            method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: new Headers({ 'Content-Type': 'application/json' }),
+    const data = { username: userName, password: passWord };
+    fetch('http://localhost:8080/Api_war/authenticate', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Succes:', data)
+        })
+        .catch((error) => {
+            console.error('Error:', error);
         });
-        return fetch(request)
-            .then(response => {
-                if (response.status < 200 || response.status >= 300)
-                {
-                    let errorMessage;
-                    if (response.status === 401)
-                    {
-                        errorMessage = "Bad credentials. ";
-                    } else if (response.status === 403)
-                    {
-                        errorMessage = "Account disabled. ";
-                    }
-                    throw new Error(response.statusText + errorMessage + "We could not sign you in");
-                }
-                return response.headers.get('jwt-token');
-            })
-            .then((token) => {
-                localStorage.setItem('token', token);
-            });
-    },
-    logout: () => {
-        localStorage.removeItem('token');
-        return Promise.resolve();
-    },
-    checkError: error => {
-        const status = error.status;
-        if (status === 401 || status === 403)
-        {
-            localStorage.removeItem('token');
-            return Promise.reject();
-        }
-        return Promise.resolve();
-    },
-    checkAuth: () => {
-        return localStorage.getItem('token') ? Promise.resolve() : Promise.reject();
-    },
-    getPermissions: () => {
-        const { role } = decodeJwt(localStorage.getItem('token'));
-        return role ? Promise.resolve(role) : Promise.reject();
-    },
-    getIdentity: () => {
-        try
-        {
-            const token = localStorage.getItem('token');
-            const { id, sub, role, pfp_location } = decodeJwt(token);
-            let fullName = sub;
-            let avatar = pfp_location;
-            return Promise.resolve({ id, fullName, avatar });
-        } catch (error)
-        {
-            return Promise.reject(error);
-        }
-    }
-};
+
+    // data = JSON.parse(json);
+    // console.log(data.username);
+    // console.log('hallo');
+    // request.onload = function () {
+    //     console.log("Hier kom ik");
+    // }
+    // request.send();
+}
