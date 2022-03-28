@@ -28,12 +28,6 @@ import { MediaSlidesList, MediaSlidesEdit, MediaSlidesCreate } from './Entities/
 import { TextSlidesList, TextSlidesEdit, TextSlidesCreate } from './Entities/text_slides';
 
 const VigmoAdmin = (params) => {
-
-    // app.get('/', (req, res) => {
-    //     res.sendFile(__dirname + '/VigmoAdmin.html');
-    //   });
-
-
     const newHistory = createHistory({ basename: '/admin', history: params.history });
 
     return (
