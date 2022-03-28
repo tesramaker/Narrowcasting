@@ -1,0 +1,87 @@
+@font-face {
+    font-family: cera-pro;
+    src: url(font/Cera\ Pro\ Regular.otf);
+  }
+
+@font-face {
+    font-family: cera-pro_italic;
+    src: url(font/Cera\ Pro\ Regular\ Italic.otf);
+  }
+
+@font-face {
+    font-family: cera-pro_bold;
+    src: url(font/Cera\ Pro\ Bold.otf);
+  }
+
+
+/* Small screen */
+
+@media (max-width: 992px) { 
+    html, body {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: cera-pro;
+    }
+    
+    .menu {
+        background-color: #009BAA;
+        color: white;
+        height: 200px;
+    }
+    
+    .logo {
+        max-height: 150px;
+        margin: 25px;
+    }
+    
+    .content {
+        margin: 50px 30px 30px 30px;
+    }
+
+}
+
+/* Big screen */
+
+@media (min-width: 992px) { 
+
+    html, body {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: cera-pro;
+    }
+
+    .menu {
+        background-color: #009BAA;
+        color: white;
+        height: 100vh;
+    }
+
+    .logo {
+        max-width: 100%;
+        margin: 50px 0px 20px 0px;
+    }
+
+    .content {
+        margin-top: 100px;
+    }
+
+    .menuItem {
+        height: 70px;
+        padding: 15px 25px 0px 25px;
+        font-size: 18pt;
+    }
+
+    .collapsMenuItem {
+        background-color: #00000010;
+        height: 60px;
+        padding: 12px 35px 0px 35px;
+        font-size: 16pt;
+    }
+
+}
