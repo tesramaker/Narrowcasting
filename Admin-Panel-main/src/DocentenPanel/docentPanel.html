@@ -18,37 +18,50 @@
                         <img src="img/NHLStenden_logo.png" alt="logo" class="logo" />
                     </div>
                 </div>
-                <div class="row menuItem">
-                    <!-- <img src="" alt="homeIcon" /> -->
-                    <p>Home</p>
-                </div>
-                <div class="row menuItem">
-                    <!-- <img src="" alt="availabilityIcon" /> -->
-                    <p>Presentie</p>
-                </div>
-                <div class="row menuItem">
-                    <!-- <img src="" alt="messageIcon" /> -->
-                    <p>Berichten</p>
-                </div>
-                <div class="row collapsMenuItem" hidden>
-                    <p>Bericht</p>
-                </div>
-                <div class="row collapsMenuItem" hidden>
-                    <p>Mededeling</p>
+                <a href="#">
+                    <div class="row menuItem active">
+                        <!-- <img src="" alt="homeIcon" /> -->
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="row menuItem">
+                        <!-- <img src="" alt="availabilityIcon" /> -->
+                        <p>Presentie</p>
+                    </div>
+                </a>
+                <a href="#" onclick={showAndHideHiddenMenu()}>
+                    <div class="row menuItem">
+                        <!-- <img src="" alt="messageIcon" /> -->
+                        <p>Berichten</p>
+                    </div>
+                </a>
+
+                <div id="collapsedMenu" class="hidden">
+                    <a href="#">
+                        <div class="row collapsMenuItem">
+                            <p>Bericht</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="row collapsMenuItem">
+                            <p>Mededeling</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="row availability">
                     <div class="col-12">
                         <div class="row">
                             <label class="switch">
                                 <input id="presence" type="checkbox" checked>
-                                <span class="slider round"></span>
+                                <span class="slider red round"></span>
                             </label>
                             <p>Aanwezig</p>
                         </div>
                         <div class="row">
                             <label class="switch">
                                 <input id="availability" type="checkbox" checked>
-                                <span class="slider round"></span>
+                                <span class="slider orange round"></span>
                             </label>
                             <p>Beschikbaar</p>
                         </div>
