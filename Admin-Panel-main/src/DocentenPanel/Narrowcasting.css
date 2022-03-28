@@ -1,0 +1,15 @@
+.container-fluid{
+    background-image: url('bg.svg');
+}
+
+.container-fluid h1{
+    font-size: 20px;
+}
+
+.docenten{
+    background-color: #FFFFFF;
+}
+
+.scroller{
+    background-color: #009BAA;
+}
