@@ -47,6 +47,19 @@ td {
   background-color: #009caa2a;
 }
 
+.tableIcons {
+  max-height: 15px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-right: 20px;
+  float: right;
+}
+
+.presenceIcon {
+  max-height: 25px;
+  object-fit: contain;
+  margin-right: 10px;
+}
 
 /* Small screen */
 
@@ -251,6 +264,11 @@ td {
         height: 40px;
       }
 
+      .save {
+        margin-right: 0px !important;
+        margin-top: 10px;
+      }
+
       .seeScreenImg {
         margin-left: 15px;
         max-height: 25px;
@@ -270,4 +288,23 @@ td {
         max-height: 25px;
         object-fit: contain;
       } 
+
+      .day {
+        background-color: #009caa2a;
+        font-size: 11pt;
+        border-radius: 3px;
+        padding: 10px;
+        margin: 5px 0px 5px 0px;
+      }
+
+      .state {
+        padding-left: 50px;
+      }
+
+      input[type=time]   {
+        margin: 5px 5px 0px 5px;
+        border: none;
+        border-radius: 3px;
+        width: 100px;
+      }
 }
