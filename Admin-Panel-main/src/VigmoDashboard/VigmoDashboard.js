@@ -66,8 +66,8 @@ const VigmoDashboard = (props) => {
 
         return ((
             <div className="component-app">
-                <SideBarPanel />
                 <SlideShowPanel apiHandler={dataProvider} />
+                <SideBarPanel />
             </div>
         ))
     }
