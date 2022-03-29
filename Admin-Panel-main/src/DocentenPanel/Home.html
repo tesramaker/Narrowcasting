@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Docenten-Panel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="docentPanel.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Navigation -->
+            <div class="col-lg-2 col-md-12 menu">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10 col-md-2">
+                        <img src="img/NHLStenden_logo.png" alt="logo" class="logo" />
+                    </div>
+                </div>
+                <div class="navigation">
+                    <a href="">
+                        <div id="Home" class="row menuItem active">
+                            <img id="HomeIcon" src="img/HomeIcon_filled.png" alt="homeIcon" class="icon" />
+                            <p>Home</p>
+                        </div>
+                    </a>
+                    <a href="Presence.html">
+                        <div id="Presence" class="row menuItem">
+                            <img id="PresenceIcon" src="img/PresenceIcon.png" alt="availabilityIcon" class="icon" />
+                            <p>Presentie</p>
+                        </div>
+                    </a>
+                    <a href="#" onclick={showAndHideHiddenMenu()}>
+                        <div id="Message" class="row menuItem">
+                            <img id="MessageIcon" src="img/MessageIcon.png" alt="availabilityIcon" class="icon" />
+                            <p>Berichten</p>
+                        </div>
+                    </a>
+                    <div id="collapsedMenu" class="hidden">
+                        <a href="Post.html">
+                            <div class="row collapsMenuItem">
+                                <p>Bericht</p>
+                            </div>
+                        </a>
+                        <a href="Announcement.html">
+                            <div class="row collapsMenuItem">
+                                <p>Mededeling</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row availability">
+                        <div class="col-12">
+                            <div class="row">
+                                <label class="switch">
+                                    <input id="presence" type="checkbox" onclick={changePresence()} checked="true">
+                                    <span class="slider red round"></span>
+                                </label>
+                                <p id="presenceText">Aanwezig</p>
+                            </div>
+                            <div class="row">
+                                <label class="switch">
+                                    <input id="availability" type="checkbox" onclick={changeAvailability()}
+                                        checked='true'>
+                                    <span class="slider orange round"></span>
+                                </label>
+                                <p id="availabilityText">Beschikbaar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Screen content -->
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-9 col-md-12 content">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8">
+                                <h3>Berichten database</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <button class="seeScreen" onclick="location.href='Narrowcasting.html';">Bekijk scherm <img class="seeScreenImg" src="img/buttonArrow.png"/></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <table>
+                                    <tr>
+                                        <th>Onderwerp</th>
+                                        <th>Categorie</th>
+                                        <th>Datum</th>
+                                        <th>Vervaldatum</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Steun Oekraïne</td>
+                                        <td>Mededeling</td>
+                                        <td>02-03-2022</td>
+                                        <td>04-04-2022</td>
+                                        <td><img class="tableIcons" src="img/pen.png"/><img class="tableIcons" src="img/trash.png"/></td>
+                                    </tr>
+                                    <tr class="coloredTr">
+                                        <td>Steun Oekraïne</td>
+                                        <td>Mededeling</td>
+                                        <td>02-03-2022</td>
+                                        <td>04-04-2022</td>
+                                        <td><img class="tableIcons" src="img/pen.png"/><img class="tableIcons" src="img/trash.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steun Oekraïne</td>
+                                        <td>Mededeling</td>
+                                        <td>02-03-2022</td>
+                                        <td>04-04-2022</td>
+                                        <td><img class="tableIcons" src="img/pen.png"/><img class="tableIcons" src="img/trash.png"/></td>
+                                    </tr>
+                                    <tr class="coloredTr">
+                                        <td>Steun Oekraïne</td>
+                                        <td>Mededeling</td>
+                                        <td>02-03-2022</td>
+                                        <td>04-04-2022</td>
+                                        <td><img class="tableIcons" src="img/pen.png"/><img class="tableIcons" src="img/trash.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steun Oekraïne</td>
+                                        <td>Mededeling</td>
+                                        <td>02-03-2022</td>
+                                        <td>04-04-2022</td>
+                                        <td><img class="tableIcons" src="img/pen.png"/><img class="tableIcons" src="img/trash.png"/></td>
+                                    </tr>
+                                    <tr class="coloredTr">
+                                        <td>Steun Oekraïne</td>
+                                        <td>Mededeling</td>
+                                        <td>02-03-2022</td>
+                                        <td>04-04-2022</td>
+                                        <td><img class="tableIcons" src="img/pen.png"/><img class="tableIcons" src="img/trash.png"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <button onclick="location.href='Post.html';" class="addPost">Voeg bericht toe <img class="addPostImg" src="img/buttonArrow.png"/></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <button onclick="location.href='Announcement.html';" class="addPost">Voeg mededeling toe <img class="addPostImg" src="img/buttonArrow.png"/></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="docentPanel.js" type="text/javascript"></script>
+    <script src="Home.js" type="text/javascript"></script>
+</body>
+
+</html>

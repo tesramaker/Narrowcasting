@@ -20,6 +20,46 @@ a, a:hover {
   text-decoration: none;
 }
 
+button {
+  background-color: #009BAA;
+  color: white;
+  border: none;
+  padding: 5px 20px 5px 20px;
+  border-radius: 2px;
+}
+
+table {
+  margin: 50px 0px 50px 0px;
+  width: 100%;
+}
+
+th {
+  background-color: #009BAA;
+  color: white;
+  padding: 5px 15px 5px 15px;
+}
+
+td {
+  padding: 8px 15px 8px 15px;
+}
+
+.coloredTr {
+  background-color: #009caa2a;
+}
+
+.tableIcons {
+  max-height: 15px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-right: 20px;
+  float: right;
+}
+
+.presenceIcon {
+  max-height: 25px;
+  object-fit: contain;
+  margin-right: 10px;
+}
 
 /* Small screen */
 
@@ -31,12 +71,17 @@ a, a:hover {
         margin: 0;
         padding: 0;
         font-family: cera-pro;
+        overflow: hidden;
     }
     
     .menu {
         background-color: #009BAA;
         color: white;
         height: 200px;
+    }
+    
+    .navigation {
+      display: none;
     }
     
     .logo {
@@ -46,6 +91,21 @@ a, a:hover {
     
     .content {
         margin: 50px 30px 30px 30px;
+        margin-top: 60px;
+        overflow: auto;
+        max-height: 90vh;
+    }
+
+    .seeScreen {
+      position: absolute;
+      right: 0;
+      height: 40px;
+    }
+
+    .seeScreenImg {
+      margin-left: 15px;
+      max-height: 20px;
+      object-fit: contain;
     }
 
 }
@@ -61,6 +121,7 @@ a, a:hover {
         margin: 0;
         padding: 0;
         font-family: cera-pro;
+        overflow: hidden;
     }
 
     .menu {
@@ -69,19 +130,32 @@ a, a:hover {
         height: 100vh;
     }
 
+    .navigation {
+      display: block;
+    }
+
     .logo {
         max-width: 100%;
         margin: 50px 0px 20px 0px;
     }
 
     .content {
-        margin-top: 100px;
+        margin-top: 60px;
+        overflow: auto;
+        height: 90vh;
     }
 
     .menuItem {
         height: 70px;
-        padding: 15px 25px 0px 25px;
+        padding: 18px 25px 0px 25px;
         font-size: 18pt;
+    }
+
+    .icon {
+      height: 20px;
+      margin-top: 7px;
+      object-fit: contain;
+      margin-right: 15px;
     }
 
     .active {
@@ -96,6 +170,11 @@ a, a:hover {
         font-size: 16pt;
     }
 
+    .collapsActive{
+      border-left: 5px solid white;
+      background-color: rgba(0, 0, 0, 0.03) !important;
+    }
+
     .availability {
         height: 100px;
         position:absolute;
@@ -106,8 +185,6 @@ a, a:hover {
       cursor: pointer;
       visibility: hidden;
     }
-
-
 
     .switch {
         position: relative;
@@ -151,10 +228,6 @@ a, a:hover {
       .orange:before {
         background-color: #E0A400;
       }
-
-      input:disabled + .orange:before .orange {
-        background: grey;
-      }
       
       .slider:before {
         position: absolute;
@@ -191,4 +264,102 @@ a, a:hover {
         border-radius: 50%;
       }
 
+      .seeScreen {
+        position: absolute;
+        right: 0;
+        margin-right: 15px;
+        height: 40px;
+      }
+
+      .save {
+        margin-right: 0px !important;
+        margin-top: 10px;
+      }
+
+      .seeScreenImg {
+        margin-left: 15px;
+        max-height: 25px;
+        object-fit: contain;
+      }
+
+      .addPost{
+        height: 50px;
+        width: 250px;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      .addPostImg {
+        float: right;
+        margin-right: 5px;
+        max-height: 25px;
+        object-fit: contain;
+      } 
+
+      .upload {
+        height: 40px;
+      }
+
+      .uploadImg {
+        margin-right: 15px;
+        max-height: 18px;
+        object-fit: contain;
+      }
+
+      .imageBox {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 10pt;
+      }
+
+      .ImageIcon {
+        max-height: 12px;
+        margin: 0px 10px 0px 18px;
+        object-fit: contain;
+      }
+
+      .day {
+        background-color: #009caa2a;
+        font-size: 11pt;
+        border-radius: 3px;
+        padding: 10px;
+        margin: 5px 0px 5px 0px;
+      }
+
+      .state {
+        padding-left: 50px;
+      }
+
+      input[type=time]   {
+        margin: 5px 5px 0px 5px;
+        border: none;
+        border-radius: 3px;
+        width: 100px;
+      }
+
+      .questionIcon {
+        max-height: 20px;
+        object-fit: contain;
+        margin-left: 20px;
+      }
+      
+      .inputfield, .inputfield:hover {
+        width: 100%;
+        border: 1px solid #AAAAAA;
+        border-radius: 3px;
+        padding: 5px 10px 5px 10px;
+        margin-bottom: 30px;
+      }
+      
+      .textarea {
+        min-height: 140px;
+      }
+
+      .linkSeePreview, .linkSeePreview:hover {
+        margin-bottom: 0;
+        float: right;
+        margin-right: 160px;
+        color: black;
+        text-decoration: underline;
+      }
 }
