@@ -1,11 +1,17 @@
+html{
+    height: 100vh;
+}
+
 body {
-  font-family: "Plus Jakarta Sans";
+    font-family: "Plus Jakarta Sans";
+    background-color: red;
 }
 
 .component-app {
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
     display: flex;
+    background-image: url('img/bg.png');
 }
 
 .component-app-no-screen {
@@ -36,6 +42,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
 }

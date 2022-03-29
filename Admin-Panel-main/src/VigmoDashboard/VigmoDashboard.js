@@ -10,7 +10,8 @@ import "@fontsource/plus-jakarta-sans";
 import { fetchUtils } from 'ra-core';
 
 const httpClient = (url, options = {}) => {
-    if (!options.headers) {
+    if (!options.headers)
+    {
         options.headers = new Headers({ Accept: 'application/json' });
     }
     const token = localStorage.getItem('screen_token');
@@ -35,7 +36,8 @@ const loginWithScreenKey = (key) => new Promise((resolve, reject) => {
 
 const VigmoDashboard = (props) => {
     const path = props.location.pathname
-    if (path === '/') {
+    if (path === '/')
+    {
         return ((
             <div className="component-app-no-screen">
                 <div className="no-screen-center">
@@ -48,7 +50,8 @@ const VigmoDashboard = (props) => {
             </div>
         ))
     }
-    else {
+    else
+    {
         const signInKey = path.replace("/", "");
         const [loaded, setLoaded] = React.useState(false);
 
@@ -58,7 +61,8 @@ const VigmoDashboard = (props) => {
             });
         }, []);
 
-        if (!loaded) {
+        if (!loaded)
+        {
             return (<div className="loading-screen">
                 <div>Please wait while vigmo is attempting verification...</div>
             </div>);
@@ -66,8 +70,8 @@ const VigmoDashboard = (props) => {
 
         return ((
             <div className="component-app">
-                <SideBarPanel />
                 <SlideShowPanel apiHandler={dataProvider} />
+                <SideBarPanel />
             </div>
         ))
     }
