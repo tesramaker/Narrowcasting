@@ -3,10 +3,16 @@
 }
 
 .container-fluid h1{
-    font-size: 20px;
+    font-size: 40px;
 }
 
-.focusMessage
+.container-fluid p{
+    font-size: 26px;
+}
+
+.content{
+    color: white;
+}
 
 .docenten{
     background-color: #FFFFFF;
@@ -14,4 +20,8 @@
 
 .scroller{
     background-color: #009BAA;
+}
+
+.content{
+    height: 75vh;
 }
