@@ -5,6 +5,9 @@
     <title>Docenten-Panel</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="docentPanel.css">
 </head>
 
@@ -77,7 +80,38 @@
                 <div class="row">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10 col-md-12 content">
-                        <h1>Post</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>Bericht toevoegen</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Een bericht zal op het scherm in het grote deel worden weergegeven. <img
+                                        src="img/questionIcon.png" class="questionIcon" /></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h6><b>Titel</b></h6>
+                                <input placeholder="Titel" type="text" class="inputfield" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h6><b>Bericht</b></h6>
+                                <textarea id="editor" placeholder="Bericht" class="inputfield textarea"></textarea>
+                                <div data-tiny-editor data-bold="no" data-formatblock="no" data-italic="no"
+                                    data-underline="no" data-fontname="no" data-forecolor="no" data-justifyleft="no"
+                                    data-justifycenter="no" data-justifyright="no" data-insertorderedlist="no"
+                                    data-insertunorderedlist="no" data-outdent="no" data-indent="no"
+                                    data-remove-format="no">
+                                    <p>
+                                        Default Text Here
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

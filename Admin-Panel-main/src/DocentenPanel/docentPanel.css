@@ -61,6 +61,25 @@ td {
   margin-right: 10px;
 }
 
+.questionIcon {
+  max-height: 20px;
+  object-fit: contain;
+  margin-left: 20px;
+}
+
+.inputfield, .inputfield:hover {
+  width: 100%;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 30px;
+}
+
+.textarea {
+  min-height: 200px;
+  
+}
+
 /* Small screen */
 
 @media (max-width: 992px) { 
