@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useDate } from "../logic/currentTime";
 import "./SideBarPanel.css";
 import { TransitionGroup } from 'react-transition-group'
-import { colors } from "../config/colors";
 
 const SideBarPanel = () => {
 
@@ -18,30 +17,36 @@ const SideBarPanel = () => {
         const dateTimeString = date + " " + time;
         const greetingString = wish + " Students!";
 
-        if (dateTimeString === currentDisplay.text || greetingString === currentDisplay.text) {
+        if (dateTimeString === currentDisplay.text || greetingString === currentDisplay.text)
+        {
             //this means no useDate() update was issued: 
-            if (currentDisplay.greeting) {
+            if (currentDisplay.greeting)
+            {
                 setCurrentDisplay({
                     text: dateTimeString,
                     greeting: false
                 })
             }
-            else {
+            else
+            {
                 setCurrentDisplay({
                     text: greetingString,
                     greeting: true
                 })
             }
         }
-        else {
+        else
+        {
             //this means the time changed and the component wants to update.
-            if (currentDisplay.greeting) {
+            if (currentDisplay.greeting)
+            {
                 setCurrentDisplay({
                     text: greetingString,
                     greeting: true
                 })
             }
-            else {
+            else
+            {
                 setCurrentDisplay({
                     text: dateTimeString,
                     greeting: false
@@ -56,7 +61,7 @@ const SideBarPanel = () => {
     }, 10000);
 
     return (
-        <div className="component-sidebar" style={{ backgroundColor: colors.offWhite }}>
+        <div className="component-sidebar">
             <div >
                 {currentDisplay.text}
             </div>

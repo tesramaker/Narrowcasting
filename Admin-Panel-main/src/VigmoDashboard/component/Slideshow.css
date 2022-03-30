@@ -2,14 +2,15 @@
 
 .slideshow {
   margin: 0 auto;
-  overflow: hidden;
   height: 100vh;
   display: grid;
+  overflow: hidden;
 }
 
 .slideshowSlider {
   white-space: nowrap;
   transition: ease 1000ms;
+  height: 75vh;
 }
 
 .slideshowSliderWrapper {
@@ -19,18 +20,16 @@
 
 .slide {
   display: inline-block;
-  height: 100vh;
+  height: 75vh;
   width: 100%;
   white-space: break-spaces;
-  overflow: hidden;
 }
 
 .slideFrame {
-  border: white solid 8px;
-  margin: 44px;
+  border: none;
+  height: 80vh;
   grid-column: 1;
   grid-row: 1;
-  z-index: 1000000000;
   display: flex;
   justify-content: flex-end;
 }
@@ -45,12 +44,7 @@
 }
 
 .slideContent {
-  padding: 90px 80px 0px 90px;
-  height: 95vh;
-}
-
-.rssWrapper {
-  padding: 90px 80px 0px 90px;
+  height: 75vh;
 }
 
 .rssWrapper > h2 {
@@ -79,9 +73,12 @@
 /* Buttons */
 
 .slideshowDots {
+  background-color: #FFFFFF;
   text-align: center;
   display: flex;
   align-items: flex-end;
+  width: 75vw;
+  margin-left: 15vw;
 }
 
 .slideshowDot {
@@ -91,7 +88,8 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 0px 7px 0px 1px;
-  background-color: #ffffff;
+  background-color: #009BAA;
+  opacity: 20%;
 }
 
 .slideshowDot.active {
