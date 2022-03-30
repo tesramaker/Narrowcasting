@@ -78,17 +78,17 @@
   text-align: center;
   display: flex;
   align-items: flex-end;
-  width: 75vw;
+  width: 69.5vw;
   margin-left: 15vw;
   margin-top: 1vh;
 }
 
 .slideshowDot {
   display: inline-block;
-  height: 42px;
+  height: 6vh;
   width: 250px;
   cursor: pointer;
-  margin: 0px 7px 0px 1px;
+  margin: 3vh 7px 0px 1px;
   background-color: #009BAA;
   opacity: 50%;
 }
