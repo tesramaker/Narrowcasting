@@ -94,14 +94,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Beschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mAvaMonday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('available', 'monday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pAvaMonday" onclick="addTimefield('available', 'monday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="avaMonday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -110,14 +110,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Onbeschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mUnavaMonday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('unavailable', 'monday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pUnavaMonday" onclick="addTimefield('unavailable', 'monday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="unavaMonday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -126,14 +126,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Afwezig van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mPreMonday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('absent', 'monday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pPreMonday" onclick="addTimefield('absent', 'monday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="preMonday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -149,14 +149,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Beschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mAvaTuesday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('available', 'tuesday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pAvaTuesday" onclick="addTimefield('available', 'tuesday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="avaTuesday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -165,14 +165,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Onbeschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mUnavaTuesday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('unavailable', 'tuesday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pUnavaTuesday" onclick="addTimefield('unavailable', 'tuesday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="unavaTuesday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -181,14 +181,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Afwezig van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mPreTuesday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('absent', 'tuesday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pPreTuesday" onclick="addTimefield('absent', 'tuesday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="preTuesday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -204,14 +204,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Beschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mAvaWednesday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('available', 'wednesday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pAvaWednesday" onclick="addTimefield('available', 'wednesday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="avaWednesday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -220,14 +220,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Onbeschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mUnavaWednesday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('unavailable', 'wednesday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pUnavaWednesday" onclick="addTimefield('unavailable', 'wednesday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="unavaWednesday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -236,14 +236,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Afwezig van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mPreWednesday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('absent', 'wednesday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pPreWednesday" onclick="addTimefield('absent', 'wednesday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="preWednesday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -259,14 +259,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Beschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mAvaThursday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('available', 'thursday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pAvaThursday" onclick="addTimefield('available', 'thursday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="avaThursday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -275,14 +275,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Onbeschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mUnavaThursday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('unavailable', 'thursday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pUnavaThursday" onclick="addTimefield('unavailable', 'thursday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="unavaThursday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -291,14 +291,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Afwezig van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mPreThursday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('absent', 'thursday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pPreThursday" onclick="addTimefield('absent', 'thursday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="preThursday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -314,14 +314,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Beschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mAvaFriday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('available', 'friday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pAvaFriday" onclick="addTimefield('available', 'friday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="avaFriday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -330,14 +330,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Onbeschikbaar van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mUnavaFriday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('unavailable', 'friday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pUnavaFriday" onclick="addTimefield('unavailable', 'friday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="unavaFriday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
@@ -346,14 +346,14 @@
                                                     <div class="col-8">
                                                         <p style="margin:0px 0px 0px 0px;">Afwezig van:</p>
                                                     </div>
-                                                    <div class="col-1" style="visibility:hidden;">
-                                                        <p style="margin:0px 0px 0px 0px;">-</p>
+                                                    <div id="mPreFriday" class="col-1" style="visibility:hidden;">
+                                                        <p onclick="removeTimefield('absent', 'friday')" class="pointer" style="margin:0px 0px 0px 0px;">-</p>
                                                     </div>
                                                     <div class="col-2">
-                                                        <p style="margin:0px 0px 0px 0px;">+</p>
+                                                        <p id="pPreFriday" onclick="addTimefield('absent', 'friday')" class="pointer" style="margin:0px 0px 0px 0px;">+</p>
                                                     </div>
                                                 </div>
-                                                <p style="margin:0;"><input type="time" /> -
+                                                <p id="preFriday" style="margin:0;"><input type="time" /> -
                                                     <input type="time" />
                                                 </p>
                                             </div>
