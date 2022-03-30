@@ -124,6 +124,10 @@ td {
         overflow: hidden;
     }
 
+    .pointer {
+      cursor: pointer;
+    }
+
     .menu {
         background-color: #009BAA;
         color: white;
