@@ -3,18 +3,67 @@
 
 <head>
     <script src="login.js"></script>
-    <!-- <link rel="stylesheet" href="login.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="docentPanel.css" />
 </head>
 
 <body>
-    <input type="text" id="userName">
-    <input type="password" id="password">
-    <input type="button" value="work" id="test" onclick="checkCredentials()">
-    <div id="showUsername">
-
-    </div>
-    <div id="showPassword">
-
+    <div class="row">
+        <div class="col-lg-6 col-md-12 loginUncolored"> 
+            <div class="row">
+                <div class="col-lg-2">
+                    <img src="img/NHLStenden_logo_blue.png" class="logoblue" />
+                </div>
+            </div>
+            <div class="loginbox">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-10 col-md-12">
+                        <h1 class="title">Login</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-10 col-md-12">
+                        <h6>E-mailadres</h6>
+                        <input placeholder="E-mailadres" type="text" class="inputfield short" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-10 col-md-12">
+                        <h6>Wachtwoord</h6>
+                        <input placeholder="Wachtwoord" type="password" class="inputfield short" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-10 col-md-12">
+                        <button class="upload loginbtn" onclick="location.href='Home.html'">Login <img class="seeScreenImg"
+                            src="img/buttonArrow.png" /></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-10 col-md-12 noAcc">
+                        <p>Geen account? Neem contact op met<br> <a href="#" class="loginlink">ict@nhlstenden.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- <input type="text" id="userName">
+        <input type="password" id="password">
+        <input type="button" value="work" id="test" onclick="checkCredentials()">
+        <div id="showUsername">
+    
+        </div>
+        <div id="showPassword">
+    
+        </div> -->
+        </div>
+        <div class="col-lg-6 loginColored">
+            <img src="img/backgroundLogin.png" class="loginBackground" />
+        </div>
     </div>
 </body>
 

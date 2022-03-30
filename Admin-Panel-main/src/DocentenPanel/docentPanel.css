@@ -124,6 +124,24 @@ td {
         overflow: hidden;
     }
 
+    .loginColored {
+      background-color: #009BAA;
+      height: 100vh;
+    }
+
+    .loginBackground {
+      margin-top: 10vh;
+      max-height: 80vh;
+      position: absolute;
+      right: 0;
+      margin-right: 25vh;
+    }
+
+    .loginUncolored{
+      background-color: white;
+      height: 100vh;
+    }
+
     .pointer {
       cursor: pointer;
     }
@@ -141,6 +159,18 @@ td {
     .logo {
         max-width: 100%;
         margin: 50px 0px 20px 0px;
+    }
+
+    .logoblue {
+      max-height: 100px;
+      margin: 40px 0px 0px 40px;
+    }
+
+    .title {
+      color: #009BAA;
+      margin-left: 10px;
+      margin-bottom: 30px;
+      font-family: cera-pro_bold;
     }
 
     .content {
@@ -347,12 +377,38 @@ td {
         margin-left: 20px;
       }
       
+      .loginbox {      
+        padding: 15px 0px 30px 80px;
+      }
+      .loginbox h6 {
+        margin-left: 10px;
+      }
+
       .inputfield, .inputfield:hover {
         width: 100%;
         border: 1px solid #AAAAAA;
         border-radius: 3px;
         padding: 5px 10px 5px 10px;
         margin-bottom: 30px;
+      }
+
+      .loginlink, .loginlink:hover {
+        color: #009BAA;
+        text-decoration: underline;
+      }
+
+      .loginbtn {
+        font-size: 14pt;
+      }
+
+      .noAcc {
+        margin-top: 50px;
+        font-size: 10pt;
+      }
+
+      .short, .short:hover {
+        height: 40px;
+        width: 50%;
       }
       
       .textarea {
@@ -365,5 +421,71 @@ td {
         margin-right: 160px;
         color: black;
         text-decoration: underline;
+      }
+
+      .popupMenu {
+        position: fixed;
+        top: 0;
+        margin-left: 20vw;
+        margin-top: 10vh;
+        width: 60vw;
+        height: 80vh;
+        background-color: white;
+
+      }
+
+      .popupMenuQuestion {
+        visibility: hidden;
+      }
+
+      .popupUpload {
+        visibility: hidden;
+      }
+
+      .popupPreview {
+        visibility: hidden;
+      }
+
+      .popupMenuBar {
+        height: 50px;
+        background-color: #009BAA;
+      }
+
+      .announcementBar {
+        height: 50px;
+        margin-top: 25vh;
+        padding: 12px 25px 12px 25px;
+        width: 100%;
+        color: white;
+        background-color: #009BAA;
+      }
+
+      .bottom {
+        bottom: 0;
+        margin-bottom: 20px;
+      }
+
+      .popupContent {
+        padding: 25px;
+        font-size: 12pt;
+      }
+
+      .closeIcon {
+        float: right;
+        margin: 15px;
+        max-height: 20px;
+        max-width: 20px;
+        object-fit: contain;
+      }
+
+      .full-screencontainer{
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(90, 90, 90, 0.5);
+        z-index: 9999;
       }
 }

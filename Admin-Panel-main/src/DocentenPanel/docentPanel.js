@@ -1,3 +1,68 @@
+const messages = [
+    {
+        id: 1,
+        subject: "Steun Oekraïne",
+        category: "Mededeling",
+        date_post: "02-03-2022",
+        date_delete: "04-04-2022"
+    },
+    {
+        id: 2,
+        subject: "Steun Oekraïne",
+        category: "Mededeling",
+        date_post: "02-03-2022",
+        date_delete: "04-04-2022"
+    },
+    {
+        id: 3,
+        subject: "Steun Oekraïne",
+        category: "Mededeling",
+        date_post: "02-03-2022",
+        date_delete: "04-04-2022"
+    },
+    {
+        id: 4,
+        subject: "Steun Oekraïne",
+        category: "Mededeling",
+        date_post: "02-03-2022",
+        date_delete: "04-04-2022"
+    },
+    {
+        id: 5,
+        subject: "Steun Oekraïne",
+        category: "Mededeling",
+        date_post: "02-03-2022",
+        date_delete: "04-04-2022"
+    },
+    {
+        id: 6,
+        subject: "Steun Oekraïne",
+        category: "Mededeling",
+        date_post: "02-03-2022",
+        date_delete: "04-04-2022"
+    }
+];
+
+
+if (document.getElementById('tableBody')) {
+    fillMessagesTable();
+}
+
+function fillMessagesTable() {
+    let tableBody = document.getElementById('tableBody');
+    for (i in messages) {
+        let message = messages[i];
+        let child = null;
+        if (i % 2) {
+            child = '<tr class="coloredTr"><td>' + message.subject + '</td><td>' + message.category + '</td><td>' + message.date_post + '</td><td>' + message.date_delete + '</td><td><img class="tableIcons" src="img/pen.png" /><img class="tableIcons"src="img/trash.png" /></td></tr>';
+        }
+        else {
+            child = '<tr><td>' + message.subject + '</td><td>' + message.category + '</td><td>' + message.date_post + '</td><td>' + message.date_delete + '</td><td><img class="tableIcons" src="img/pen.png" /><img class="tableIcons"src="img/trash.png" /></td></tr>';
+        }
+        tableBody.innerHTML += child;
+    }
+}
+
 
 function showAndHideHiddenMenu() {
     let Message = document.getElementById('Message');
@@ -31,11 +96,13 @@ function changePresence() {
 
     if (check.getAttribute('checked') == 'true') {
         //checked.
+        presence = false;
         text.innerHTML = 'Afwezig';
         check.setAttribute('checked', false);
         // document.getElementById('availability').setAttribute('disabled', true);
     } else {
         //not checked.
+        presence = true;
         text.innerHTML = 'Aanwezig';
         check.setAttribute('checked', true);
         // document.getElementById('availability').setAttribute('disabled', false);
@@ -48,19 +115,43 @@ function changeAvailability() {
 
     if (check.getAttribute('checked') == 'true') {
         //checked.
+        availability = false;
         text.innerHTML = 'Onbeschikbaar';
         check.setAttribute('checked', false);
     } else {
         //not checked.
+        availability = true;
         text.innerHTML = 'Beschikbaar';
         check.setAttribute('checked', true);
     }
 }
 
-function addTimefield(category, day){
+function openPopupMenu(category) {
+    let popupMenu = document.getElementById('popup' + category);
+    let container = document.getElementById('full-screencontainer');
+
+    popupMenu.style.visibility = 'visible';
+    container.style.visibility = 'visible';
+}
+
+function closePopupMenu() {
+    let popupUpload = document.getElementById('popupUpload');
+    let popupQuestion = document.getElementById('popupQuestion');
+    let popupPreview = document.getElementById('popupPreview');
+    let container = document.getElementById('full-screencontainer');
+
+    if (popupUpload) {
+        popupUpload.style.visibility = 'hidden';
+    }
+    popupQuestion.style.visibility = 'hidden';
+    popupPreview.style.visibility = 'hidden';
+    container.style.visibility = 'hidden';
+}
+
+function addTimefield(category, day) {
     let list = setIds(category, day);
-    
-    if(list[0] != null){
+
+    if (list[0] != null) {
         let clone = list[0].cloneNode(true);
         clone.id = list[3] + 1;
         list[0].parentNode.appendChild(clone);
@@ -68,24 +159,24 @@ function addTimefield(category, day){
     }
 }
 
-function removeTimefield(category, day){
+function removeTimefield(category, day) {
     let list = setIds(category, day);
-    let clone = document.getElementById(list[3]+1);
-    
-    if(clone != null){
+    let clone = document.getElementById(list[3] + 1);
+
+    if (clone != null) {
         list[0].parentNode.removeChild(clone);
         list[1].style.visibility = 'invisible';
     }
 }
 
-function setIds(category, day){
+function setIds(category, day) {
     let timefield;
     let minus;
     let plus;
     let text;
-    switch(day){
+    switch (day) {
         case 'monday':
-            switch(category){
+            switch (category) {
                 case 'available':
                     timefield = document.getElementById('avaMonday');
                     minus = document.getElementById('mAvaMonday');
@@ -105,11 +196,11 @@ function setIds(category, day){
                     text = 'preMonday';
                     break;
                 default:
-                console.log('Not a category.');
+                    console.log('Not a category.');
             }
             break;
         case 'tuesday':
-            switch(category){
+            switch (category) {
                 case 'available':
                     timefield = document.getElementById('avaTuesday');
                     minus = document.getElementById('mAvaTuesday');
@@ -129,11 +220,11 @@ function setIds(category, day){
                     text = 'preTuesday';
                     break;
                 default:
-                console.log('Not a category.');
+                    console.log('Not a category.');
             }
             break;
         case 'wednesday':
-            switch(category){
+            switch (category) {
                 case 'available':
                     timefield = document.getElementById('avaWednesday');
                     minus = document.getElementById('mAvaWednesday');
@@ -153,11 +244,11 @@ function setIds(category, day){
                     text = 'preWednesday';
                     break;
                 default:
-                console.log('Not a category.');
+                    console.log('Not a category.');
             }
             break;
         case 'thursday':
-            switch(category){
+            switch (category) {
                 case 'available':
                     timefield = document.getElementById('avaThursday');
                     minus = document.getElementById('mAvaThursday');
@@ -177,11 +268,11 @@ function setIds(category, day){
                     text = 'preThursday';
                     break;
                 default:
-                console.log('Not a category.');
+                    console.log('Not a category.');
             }
             break;
         case 'friday':
-            switch(category){
+            switch (category) {
                 case 'available':
                     timefield = document.getElementById('avaFriday');
                     minus = document.getElementById('mAvaFriday');
@@ -201,7 +292,7 @@ function setIds(category, day){
                     text = 'preFriday';
                     break;
                 default:
-                console.log('Not a category.');
+                    console.log('Not a category.');
             }
             break;
         default:
