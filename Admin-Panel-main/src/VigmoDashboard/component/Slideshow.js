@@ -115,8 +115,7 @@ function Slideshow(props) {
   return (
     <div className="slideshow">
       <div className="slideshowSliderWrapper">
-        <div
-          className="slideshowSlider"
+        <div className="slideshowSlider"
           style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
           {slides.map((slideObject, index) => {
             const slideType = slideObject.path.split('/').filter(i => i);
@@ -143,23 +142,26 @@ function Slideshow(props) {
           })}
         </div>
       </div>
-      {/* <image src="img/NHLStenden_logo_01.png" alt="Logo NHLStenden" class="logo"></image> */}
+      <div class="footer">
+        <div class="logo">
+        </div>
+        <div className="slideshowDots">
+          {slides.map((_, idx) => (
+            <div
+              key={idx}
+              className={`slideshowDot${index === idx ? " active" : ""}`}
+              onClick={() => {
+                setIndex(idx);
+              }}
+            ></div>
+          ))}
+        </div>
+        <legend className="slideType">
+          {props.title}
+        </legend>
+      </div>
       <fieldset className="slideFrame">
       </fieldset>
-      <div className="slideshowDots">
-        {slides.map((_, idx) => (
-          <div
-            key={idx}
-            className={`slideshowDot${index === idx ? " active" : ""}`}
-            onClick={() => {
-              setIndex(idx);
-            }}
-          ></div>
-        ))}
-      </div>
-      <legend className="slideType">
-        {props.title}
-      </legend>
     </div>
   );
 }

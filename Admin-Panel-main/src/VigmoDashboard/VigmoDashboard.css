@@ -4,7 +4,6 @@ html{
 
 body {
     font-family: "Plus Jakarta Sans";
-    background-color: red;
 }
 
 .component-app {
@@ -43,5 +42,5 @@ body {
     justify-content: center;
     align-items: center;
     height: 75vh;
-    width: 100%;
+    width: 75vh;
 }
