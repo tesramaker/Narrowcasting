@@ -119,23 +119,20 @@ function Slideshow(props) {
           style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
           {slides.map((slideObject, index) => {
             const slideType = slideObject.path.split('/').filter(i => i);
-            let resource = <div>Component not found</div>
-            if (slideType[0] == "text_slides")
-            {
-              resource = <TextSlide fontSize={fontSizes.large} api={api} path={slideObject.path} ></TextSlide>
-            } else if (slideType[0] == "media_slides")
+            let resource = <div>Component not found</div>;
+            if (slideType[0] == "media_slides")
             {
               resource = <MediaSlide api={api} path={slideObject.path} />
+            } else if (slideType[0] == "text_slides")
+            {
+              resource = <TextSlide fontSize={fontSizes.large} api={api} path={slideObject.path} />
             } else if (slideType[0] == "rss_slides")
             {
               resource = <RssSlide api={api} path={slideObject.path} />
             }
 
             return (
-              <div
-                className="slide"
-                key={index}
-              >
+              <div className="slide" key={index}>
                 {resource}
               </div>
             );

@@ -31,7 +31,7 @@ function TextSlide(props) {
   return (
     <div className="slideContent">
       <h1>{text.title}</h1>
-      <div style={{ fontSize: props.fontSize }} dangerouslySetInnerHTML={{ __html: text.message }}></div>
+      <div style={{ fontSize: props.fontSizex, }} dangerouslySetInnerHTML={{ __html: text.message }}></div>
     </div>
   );
 }

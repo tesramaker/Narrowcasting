@@ -7,6 +7,7 @@
 }
 
 .slideshowSlider {
+  display: flex;
   white-space: nowrap;
   transition: ease 1000ms;
   height: 75vh;
@@ -20,7 +21,7 @@
 
 .slide {
   display: inline-block;
-  height: 75vh;
+  height: 100vh;
   width: 100%;
   white-space: break-spaces;
 }
@@ -36,16 +37,21 @@
 
 .slideType {
   font-weight: bold;
+  background-color: #009BAA;
   color: white;
-  font-size: 23px;
-  margin: -20px 0px auto 17px;
-  padding-inline-end: 10px;
-  padding-inline-start: 10px;
-  margin-top: 10vh;
+  font-size: 26px;
+  margin-left: 17vw;
+  margin-top: 3.5vh;
+  height: 5.5vh;
+  padding-top: 2vh;
+  padding-left: 2vw;
 }
 
 .slideContent {
   height: 75vh;
+  width: 100vw;
+  padding-top: 25vh;
+  padding-left: 2vw;
 }
 
 .rssWrapper > h2 {
@@ -80,7 +86,7 @@
   align-items: flex-end;
   width: 69.5vw;
   margin-left: 15vw;
-  margin-top: 1vh;
+  margin-top: 4vh;
 }
 
 .slideshowDot {
@@ -88,7 +94,7 @@
   height: 6vh;
   width: 250px;
   cursor: pointer;
-  margin: 3vh 7px 0px 1px;
+  margin: 0 7px 0px 2vw;
   background-color: #009BAA;
   opacity: 50%;
 }
@@ -114,16 +120,8 @@
 }
 
 .resource {
-  text-align: center;
-  height: 80vh;
+  margin-top: 2%;
+  text-align: left;
+  height: 80%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sizingResource {
-  max-width: 100%;
-  max-height: 80vh;
-  -webkit-box-shadow: 0px 5px 10px 3px rgb(0 0 0 / 26%);
-  box-shadow: 0px 5px 10px 3px rgb(0 0 0 / 26%);
 }
