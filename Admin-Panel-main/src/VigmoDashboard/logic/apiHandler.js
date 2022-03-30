@@ -13,4 +13,9 @@ export default (apiUrl, httpClient) => ({
         .then(({ json }) => ({
             data: json,
         })),
+
+    getUsers: () => httpClient(`${apiUrl}/users`)
+        .then(({ json }) => ({
+            data: json,
+        })),
 });
