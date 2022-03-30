@@ -98,6 +98,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/files/*/render")
                     .permitAll()
 
+
+                .antMatchers(HttpMethod.GET, "/users").permitAll()
+                
                 // Allow get of the screens by the SCREEN role.
                 .antMatchers(
                         HttpMethod.GET,

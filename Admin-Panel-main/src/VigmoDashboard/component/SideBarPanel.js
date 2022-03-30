@@ -59,31 +59,44 @@ const SideBarPanel = (props) => {
     // setTimeout(() => {
     //     changeGreeting(); //run greeting changer every 10 seconds
     // }, 10000);
-    
-  const [loaded, setLoaded] = React.useState(false);
-  const [emptyDb, setEmptyDb] = React.useState(false);
 
+    const [loaded, setLoaded] = React.useState(false);
+    const [emptyDb, setEmptyDb] = React.useState(false);
+
+    const [users, setUsers] = React.useState([]);
 
     const api = props.apiHandler;
 
     React.useEffect(() => {
         api.getUsers().then((data) => {
-            console.log(data);
-    
-        //   if (data.data.length == 0) {
-        //     setEmptyDb(true);
-        //     setLoaded(true);
-        //   }
-        //   else {
-        //     console.log('working');
-        //   }
+            if (data.data.length == 0) {
+                setEmptyDb(true);
+                setLoaded(true);
+            }
+            else {
+                let usernames = [];
+                for (let i = 0; i < data.data.length; i++) {
+                    usernames.push(data.data[i].username);
+                }
+                setUsers(usernames);
+            }
         });
-      }, []);
+    }, []);
+
+    function returnUsers() {
+        if (document.getElementById('users')) {
+            let usersToReturn = document.getElementById('users');
+            for (let u in users) {
+                usersToReturn.innerHTML +=
+                    '<div>'+users[u]+'</div>';
+            }
+        }
+    }
 
     return (
         <div className="component-sidebar">
-            <div >
-                {/* {currentDisplay.text} */}
+            <div id="users">
+                {returnUsers()}
             </div>
             <div className="half-border"></div>
         </div>

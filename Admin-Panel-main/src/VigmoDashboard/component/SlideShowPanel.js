@@ -45,11 +45,11 @@ const SlideShowPanel = (props) => {
   // function to call when the current slideshow changes.
   React.useEffect(() => {
     if (currentSlideshow == null) {
-      console.log("no slideshow set yet, aborting slideshow rendering.")
+      // console.log("no slideshow set yet, aborting slideshow rendering.")
       setLoaded(false);
     }
     else {
-      console.log("current slideshow", currentSlideshow);
+      // console.log("current slideshow", currentSlideshow);
 
       setLoaded(true);
     }
@@ -58,12 +58,12 @@ const SlideShowPanel = (props) => {
 
   //function to execute when a slideshow has done its rotation, this means move on to the next slideshow, if there are any.
   const slideShowCompleted = (id) => {
-    console.log("Done with slideshow: ", slideshows[id]);
+    // console.log("Done with slideshow: ", slideshows[id]);
 
     let nextSlideId = 0;
     if (currentSlideshow != null && currentSlideshow != undefined) {
       nextSlideId = slideshows.indexOf(currentSlideshow) + 1;
-      console.log("nextSlideId: ", nextSlideId);
+      // console.log("nextSlideId: ", nextSlideId);
     }
     else{
       setLoaded(false);
@@ -71,7 +71,7 @@ const SlideShowPanel = (props) => {
     
     if (nextSlideId >= slideshows.length) nextSlideId = 0; //start again.
 
-    console.log("id: ", nextSlideId);
+    // console.log("id: ", nextSlideId);
     
     setCurrentSlideshow(slideshows[nextSlideId]);
     setSlideshowName(slideshows[nextSlideId].name);
