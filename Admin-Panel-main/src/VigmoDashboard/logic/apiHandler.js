@@ -18,4 +18,10 @@ export default (apiUrl, httpClient) => ({
         .then(({ json }) => ({
             data: json,
         })),
+
+    getAvailabilities: () => httpClient(`${apiUrl}/availabilities`)
+        .then(({ json }) => ({
+            data: json,
+        })),
+
 });

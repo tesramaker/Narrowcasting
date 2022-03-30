@@ -1,9 +1,14 @@
+@font-face {
+    font-family: cera-pro;
+    src: url(fonts/Cera\ Pro\ Regular.otf);
+  }
+
 html{
     height: 100vh;
 }
 
 body {
-    font-family: "Plus Jakarta Sans";
+    font-family: cera-pro;
 }
 
 .component-app {
