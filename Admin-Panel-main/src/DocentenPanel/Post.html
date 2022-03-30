@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="docentPanel.css">
-    <script src="https://cdn.tiny.cloud/1/sfpec3nwpto5det09ixciijb9j62a76jr1nz7z6etms2an3e/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/sfpec3nwpto5det09ixciijb9j62a76jr1nz7z6etms2an3e/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
 
 </head>
 
@@ -86,8 +87,8 @@
                         </div>
                         <div class="row" style="margin-bottom: 30px;">
                             <div class="col-12">
-                                <p>Een bericht zal op het scherm in het grote deel worden weergegeven. <img
-                                        src="img/questionIcon.png" class="questionIcon" /></p>
+                                <p>Een bericht zal op het scherm in het grote deel worden weergegeven. 
+                                    <img onclick="openPopupMenu('Question')" src="img/questionIcon.png" class="questionIcon pointer" /></p>
                             </div>
                         </div>
                         <div class="row">
@@ -99,31 +100,81 @@
                         <div class="row">
                             <div class="col-12">
                                 <h6><b>Bericht</b></h6>
-                                <textarea id="editor" placeholder="Bericht" class="inputfield textarea" name="message"></textarea>
+                                <textarea id="editor" placeholder="Bericht" class="inputfield textarea"
+                                    name="message"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <h6><b>Afbeelding(en)</b></h6>
-                                <button class="upload"><img class="uploadImg" src="img/upload.png"/>Upload afbeelding</button>
+                                <button onclick="openPopupMenu('Upload')" class="upload"><img class="uploadImg" src="img/upload.png" />Upload
+                                    afbeelding</button>
                                 <p class="imageBox"><img class="ImageIcon" src="img/imageIcon.png" />imageName.jpg</p>
-                                <p class="imageBox" hidden="true"><img class="ImageIcon" src="img/imageIcon.png" />imageName.jpg</p>
-                                <p class="imageBox" hidden="true"><img class="ImageIcon" src="img/imageIcon.png" />imageName.jpg</p>
-                                <p class="imageBox" hidden="true"><img class="ImageIcon" src="img/imageIcon.png" />imageName.jpg</p>
+                                <p class="imageBox" hidden="true"><img class="ImageIcon"
+                                        src="img/imageIcon.png" />imageName.jpg</p>
+                                <p class="imageBox" hidden="true"><img class="ImageIcon"
+                                        src="img/imageIcon.png" />imageName.jpg</p>
+                                <p class="imageBox" hidden="true"><img class="ImageIcon"
+                                        src="img/imageIcon.png" />imageName.jpg</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6"></div>
                             <div class="col-lg-6 col-md-12">
-                               <a href="#" class="linkSeePreview">Zie preview</a> <button class="seeScreen">Plaats <img class="seeScreenImg" src="img/buttonArrow.png"/></button>
+                                <a href="#" onclick="openPopupMenu('Preview')" class="linkSeePreview">Zie preview</a> <button class="seeScreen">Plaats <img
+                                        class="seeScreenImg" src="img/buttonArrow.png" /></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="full-screencontainer" class="full-screencontainer">
+            <div id="popupQuestion" class="popupMenuQuestion popupMenu">
+                <div class="popupMenuBar">
+                    <img onclick="closePopupMenu()" src="img/close.png" class="closeIcon pointer" />
+                </div>
+                <div class="popupContent">
+                    <p>Het bericht wordt toegevoegd aan de slideshow op het scherm. Iedere slide wordt 30 seconden
+                        vergroot weergegeven, waarna het weer verplaatst naar onder. Onderstaande gif laat zien hoe het
+                        bericht wordt weergegeven.</p>
+                </div>
+            </div>
+            <div id="popupUpload" class="popupUpload popupMenu">
+                <div class="popupMenuBar">
+                    <img onclick="closePopupMenu()" src="img/close.png" class="closeIcon pointer" />
+                </div>
+                <div class="popupContent">
+                    <h4><b>Upload afbeelding</b></h4>
+                    <button class="upload"><img class="uploadImg" src="img/upload.png" />Upload
+                        afbeelding</button>
+                    <p style="margin-top: 15px;" class="imageBox"><img class="ImageIcon" src="img/imageIcon.png" />imageName.jpg</p>
+                    <p style="margin-top: 30px;">Mag er tekst over deze afbeelding heen staan?</p>
+
+                    <input type="radio" id="yes" name="bground" value="yes">
+                    <label for="yes">Ja</label><br>
+                    <input type="radio" id="no" name="bground" value="no">
+                    <label for="no">Nee</label>
+                    <button class="seeScreen bottom"><img class="uploadImg" src="img/upload.png" />Voeg toe</button>
+                </div>
+            </div>
+            <div id="popupPreview" class="popupPreview popupMenu">
+                <div class="popupMenuBar">
+                    <img onclick="closePopupMenu()" src="img/close.png" class="closeIcon pointer" />
+                </div>
+                <div class="popupContent">
+                    <h3 style="color: #009BAA; margin-bottom: 30px;">Enquête afstudeeronderzoek</h3>
+                    <p>Voor een afstudeeronderzoek van een student wordt onderzoek gedaan naar de studeermethoden van
+                        studenten. Zou jij als student deze enquête willen invullen?
+                        </br></br>
+                        Scan de QR-code of gebruik onderstaande link.
+                        </br></br>
+                        link.nl/linkcode</p>
+                </div>
+            </div>
+        </div>
     </div>
-<!-- 
+    <!-- 
     <script type="text/javascript">
         tinymce.init({
             selector: 'textarea#editor'
