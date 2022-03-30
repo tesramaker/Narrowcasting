@@ -124,6 +124,24 @@ td {
         overflow: hidden;
     }
 
+    .loginColored {
+      background-color: #009BAA;
+      height: 100vh;
+    }
+
+    .loginBackground {
+      margin-top: 10vh;
+      max-height: 80vh;
+      position: absolute;
+      right: 0;
+      margin-right: 25vh;
+    }
+
+    .loginUncolored{
+      background-color: white;
+      height: 100vh;
+    }
+
     .pointer {
       cursor: pointer;
     }
@@ -141,6 +159,18 @@ td {
     .logo {
         max-width: 100%;
         margin: 50px 0px 20px 0px;
+    }
+
+    .logoblue {
+      max-height: 100px;
+      margin: 40px 0px 0px 40px;
+    }
+
+    .title {
+      color: #009BAA;
+      margin-left: 10px;
+      margin-bottom: 30px;
+      font-family: cera-pro_bold;
     }
 
     .content {
@@ -347,12 +377,38 @@ td {
         margin-left: 20px;
       }
       
+      .loginbox {      
+        padding: 15px 0px 30px 80px;
+      }
+      .loginbox h6 {
+        margin-left: 10px;
+      }
+
       .inputfield, .inputfield:hover {
         width: 100%;
         border: 1px solid #AAAAAA;
         border-radius: 3px;
         padding: 5px 10px 5px 10px;
         margin-bottom: 30px;
+      }
+
+      .loginlink, .loginlink:hover {
+        color: #009BAA;
+        text-decoration: underline;
+      }
+
+      .loginbtn {
+        font-size: 14pt;
+      }
+
+      .noAcc {
+        margin-top: 50px;
+        font-size: 10pt;
+      }
+
+      .short, .short:hover {
+        height: 40px;
+        width: 50%;
       }
       
       .textarea {
