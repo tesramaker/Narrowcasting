@@ -133,6 +133,10 @@
   margin-top: 4vh;
 }
 
+.titleHeader{
+  display: inline-block;
+}
+
 .slideshowDot {
   display: inline-block;
   height: 6vh;

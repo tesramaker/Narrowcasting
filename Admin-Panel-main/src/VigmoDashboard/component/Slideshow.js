@@ -5,6 +5,7 @@ import TextSlide from "./slides/TextSlide";
 import MediaSlide from "./slides/MediaSlide";
 import Legend from "../component/Legend";
 import RssSlide from "./slides/RssSlide";
+import TextSlideTitle from "./slides/TextSlideTitle";
 import { fontSizes } from "../config/font-sizes"
 
 const delay = 2500000;
@@ -40,6 +41,8 @@ function Slideshow(props) {
     });
   }, [currentSlideshow]);
 
+  console.log(slides);
+
   //function to call when the list with slideshows updates.
   React.useEffect(() => {
     if (slides.length == 0)
@@ -61,6 +64,33 @@ function Slideshow(props) {
   // function to call when the current slideshow changes.
 
   const timeoutRef = React.useRef(null);
+
+  function header() {
+    {
+
+
+      if (<TextSlideTitle fontSize={fontSizes.large} api={api} path={_.path} /> == "")
+      {
+        slides.map((_, idx) => (
+          <div
+            key={idx}
+            className={`slideshowDot${index === idx ? " active" : ""}`}
+            onClick={() => {
+              setIndex(idx);
+            }}
+          >
+
+            <div className="tilteDot" key={1}>
+              <p></p>
+            </div>
+          </div>
+        ))
+      } else
+      {
+        return "vol"
+      }
+    }
+  }
 
   function resetTimeout() {
     if (timeoutRef.current)
@@ -151,7 +181,28 @@ function Slideshow(props) {
               onClick={() => {
                 setIndex(idx);
               }}
-            ></div>
+            >
+              {console.log()}
+              {slides.map((slideObject, index) => {
+
+                // for (a = 0; a < resource.length; a++)
+                // {
+                //   i++;
+                // }
+                //console.log("resource" + resource);
+                console.log(slideObject);
+                //console.log(resource.props);
+                return (
+                  undefined
+                );
+              })}
+
+              <div className="tilteDot" key={1}>
+                {/* {console.log(_.path.substr(0, 14))} */}
+                {_.path.substr(0, 14) !== '/media_slides/' ? 'notnull' : 'null'}
+                {<TextSlideTitle fontSize={fontSizes.large} api={api} path={_.path} />}
+              </div>
+            </div>
           ))}
         </div>
         <div className="slideType">
