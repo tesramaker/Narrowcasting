@@ -156,10 +156,9 @@ const SideBarPanel = (props) => {
                         // If true: color is green.
                         userarr[u].color = 'green';
                     }
-                    else {
-                        // If false: color is red.
-                        userarr[u].color = 'red';
-                    }
+                }
+                if(userarr[u].color != 'green'){
+                    userarr[u].color = 'red';
                 }
 
                 if (userarr[u].color == 'red') {
