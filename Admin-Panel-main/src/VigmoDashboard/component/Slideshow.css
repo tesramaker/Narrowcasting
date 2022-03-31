@@ -3,6 +3,7 @@
 .slideshow {
   margin: 0 auto;
   height: 125vh;
+  width: 80vw;
   overflow: hidden;
 }
 
@@ -84,7 +85,7 @@
   text-align: center;
   display: flex;
   align-items: flex-end;
-  width: 69.5vw;
+  width: 67vw;
   margin-left: 15vw;
   margin-top: 4vh;
 }
