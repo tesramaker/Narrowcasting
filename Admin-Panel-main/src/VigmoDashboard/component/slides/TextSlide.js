@@ -19,6 +19,7 @@ function TextSlide(props) {
   }, []);  
 
 
+
   if (!loaded)
   {
     return (

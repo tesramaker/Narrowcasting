@@ -154,7 +154,9 @@ function Slideshow(props) {
             ></div>
           ))}
         </div>
-        <Legend api={api} announcementbar={props.announcementbar} />
+        <div className="slideType">
+          <div id="announcements" className="anim"></div>
+        </div>
       </div>
       <fieldset className="slideFrame">
       </fieldset>

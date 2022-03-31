@@ -1,5 +1,6 @@
 import React from "react";
 
+import Legend from './Legend';
 import "./SlideShowPanel.css";
 import Slideshow from './Slideshow.js'
 
@@ -103,6 +104,7 @@ const SlideShowPanel = (props) => {
     <div className="component-slideshow-panel">
       <div>
         <Slideshow id={slideshows.indexOf(currentSlideshow)} title={slideshowName} apiHandler={api} currentSlideshow={currentSlideshow} announcementbar={announcementbar}  />
+        <Legend api={api} announcementbar={announcementbar} />
       </div>
     </div>
   );

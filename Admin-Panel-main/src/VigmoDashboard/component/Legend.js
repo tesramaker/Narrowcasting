@@ -1,4 +1,5 @@
 import React from "react";
+import "./Slideshow.css";
 
 import Announcement from "../component/Announcement";
 
@@ -7,6 +8,7 @@ const Legend = (props) => {
     const [announcementbar, setannouncementbar] = React.useState([]);
 
     const [announcements, setAnnouncements] = React.useState([]);
+
 
     React.useEffect(() => {
         setannouncementbar(props.announcementbar);
@@ -21,24 +23,22 @@ const Legend = (props) => {
         });
     }, [announcementbar]);
 
-    console.log(announcements)
 
     function getAnnouncements() {
-        if (document.getElementById('announcements')) {
-            let ann = document.getElementById('announcements');
-            ann.innerHTML = '';
-            for (let a in announcements) {
-                return(
-                <Announcement api={props.api} path={announcements[a].path} />
-                );
-            }
+        let arr = []
+        for (let a in announcements) {
+            arr.push(<Announcement api={props.api} path={announcements[a].path} />);
         }
+        console.log(document.getElementById('announcements'));
+        return (
+            arr
+        );
     }
 
     return (
-        <legend className="slideType">
-            <div id="announcements">{getAnnouncements()}</div>
-        </legend>
+        <div>
+            {getAnnouncements()}
+        </div>
     );
 }
 
