@@ -16,7 +16,7 @@ function TextSlide(props) {
         setLoaded(true);
       }
     });
-  }, []);
+  }, []);  
 
 
   if (!loaded)

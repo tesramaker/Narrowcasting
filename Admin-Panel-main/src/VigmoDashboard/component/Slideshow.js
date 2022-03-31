@@ -3,6 +3,7 @@ import React from "react";
 import "./Slideshow.css";
 import TextSlide from "./slides/TextSlide";
 import MediaSlide from "./slides/MediaSlide";
+import Legend from "../component/Legend";
 import RssSlide from "./slides/RssSlide";
 import { fontSizes } from "../config/font-sizes"
 
@@ -29,7 +30,7 @@ function Slideshow(props) {
       if (data.data.length == 0)
       {
         //if this slideshow contains no slides, tell the parent that its completed its rotation.
-        props.onSlideshowCompleted(props.id);
+        // props.onSlideshowCompleted(props.id);
       }
       else
       {
@@ -82,7 +83,7 @@ function Slideshow(props) {
           if (index + 1 >= slidesLength)
           {
             resetTimeout();
-            props.onSlideshowCompleted(props.id); //tell the slideshow parent that it made a full rotation.
+            // props.onSlideshowCompleted(props.id); //tell the slideshow parent that it made a full rotation.
             setIndex(0);
           }
           else
@@ -153,9 +154,7 @@ function Slideshow(props) {
             ></div>
           ))}
         </div>
-        <legend className="slideType">
-          {props.title}
-        </legend>
+        <Legend api={api} announcementbar={props.announcementbar} />
       </div>
       <fieldset className="slideFrame">
       </fieldset>

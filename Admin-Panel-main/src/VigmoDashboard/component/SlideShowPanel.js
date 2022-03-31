@@ -14,6 +14,8 @@ const SlideShowPanel = (props) => {
   //set properties for the current slideshow.
   const [slideshowName, setSlideshowName] = React.useState("");
 
+  const [announcementbar, setannouncementbar] = React.useState(null);
+
   const api = props.apiHandler;
 
   //put all the api requests in a useEffect that runs once, this way the api is not spammed upon UI changes.
@@ -39,6 +41,10 @@ const SlideShowPanel = (props) => {
       //always assign the first slideshow.
       setCurrentSlideshow(slideshows[0]);
       setSlideshowName(slideshows[0].name);
+
+      if(slideshows[1]){
+        setannouncementbar(slideshows[1]);
+      }
     }
   }, [slideshows]);
 
@@ -96,7 +102,7 @@ const SlideShowPanel = (props) => {
   return (
     <div className="component-slideshow-panel">
       <div>
-        <Slideshow id={slideshows.indexOf(currentSlideshow)} title={slideshowName} apiHandler={api} currentSlideshow={currentSlideshow} onSlideshowCompleted={slideShowCompleted} />
+        <Slideshow id={slideshows.indexOf(currentSlideshow)} title={slideshowName} apiHandler={api} currentSlideshow={currentSlideshow} announcementbar={announcementbar}  />
       </div>
     </div>
   );
