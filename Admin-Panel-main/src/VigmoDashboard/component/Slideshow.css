@@ -54,17 +54,17 @@
 
 .slideType p {
   display: inline-block !important;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
  }
 
  .anim {
    width: max-content;
    position: absolute;
      /* Starting position */
-  -moz-transform:translateX(100%);
-  -webkit-transform:translateX(100%);	
-  transform:translateX(100%);
+  -moz-transform:translateX(0%);
+  -webkit-transform:translateX(0%);	
+  transform:translateX(0%);
   /* Apply animation to this element */	
   -moz-animation: example1 25s linear infinite;
   -webkit-animation: example1 25s linear infinite;
@@ -72,18 +72,18 @@
 }
 /* Move it (define the animation) */
 @-moz-keyframes example1 {
-  0%   { -moz-transform: translateX(100%); }
+  0%   { -moz-transform: translateX(50%); }
   100% { -moz-transform: translateX(-100%); }
  }
  @-webkit-keyframes example1 {
-  0%   { -webkit-transform: translateX(100%); }
+  0%   { -webkit-transform: translateX(50%); }
   100% { -webkit-transform: translateX(-100%); }
  }
  @keyframes example1 {
   0%   { 
-  -moz-transform: translateX(100%); /* Firefox bug fix */
-  -webkit-transform: translateX(100%); /* Firefox bug fix */
-  transform: translateX(100%); 		
+  -moz-transform: translateX(50%); /* Firefox bug fix */
+  -webkit-transform: translateX(50%); /* Firefox bug fix */
+  transform: translateX(50%); 		
   }
   100% { 
   -moz-transform: translateX(-100%); /* Firefox bug fix */
