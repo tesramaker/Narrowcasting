@@ -184,23 +184,14 @@ function Slideshow(props) {
             >
               {console.log()}
               {slides.map((slideObject, index) => {
-
-                // for (a = 0; a < resource.length; a++)
-                // {
-                //   i++;
-                // }
-                //console.log("resource" + resource);
                 console.log(slideObject);
-                //console.log(resource.props);
                 return (
                   undefined
                 );
               })}
 
               <div className="tilteDot" key={1}>
-                {/* {console.log(_.path.substr(0, 14))} */}
-                {_.path.substr(0, 14) !== '/media_slides/' ? 'notnull' : 'null'}
-                {<TextSlideTitle fontSize={fontSizes.large} api={api} path={_.path} />}
+                {_.path.substr(0, 14) !== '/media_slides/' ? <TextSlideTitle fontSize={fontSizes.large} api={api} path={_.path} /> : 'Image'}
               </div>
             </div>
           ))}
