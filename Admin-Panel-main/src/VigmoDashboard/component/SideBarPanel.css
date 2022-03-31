@@ -9,7 +9,7 @@
     min-width: 258px;
     margin-right: 20px;
     margin-top: 20px;
-    border-left: 5px solid#009BAA;
+    border-left: 5px solid #009BAA;
     border-bottom: 5px solid #009BAA;
     background-color: white;
 }
@@ -21,4 +21,9 @@
     right: 0;
     bottom: 0;
     height: 40px;
+}
+
+.state{
+    height: 20px;
+    margin: 10px 20px 0px 0px;
 }

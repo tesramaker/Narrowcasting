@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useDate } from "../logic/currentTime";
 import "./SideBarPanel.css";
 import { TransitionGroup } from 'react-transition-group'
+import green from './img/green.png';
+import red from './img/red.png';
 
 const SideBarPanel = (props) => {
 
@@ -97,11 +99,9 @@ const SideBarPanel = (props) => {
     const [emptyDb, setEmptyDb] = React.useState(false);
 
     const [users, setUsers] = React.useState([]);
-    
-    const [userAvailable, setuserAvailable] = React.useState([]);
 
     const [availabilities, setAvailabilities] = React.useState([]);
-    
+
 
 
 
@@ -139,27 +139,37 @@ const SideBarPanel = (props) => {
         if (document.getElementById('users')) {
             let usersToReturn = document.getElementById('users');
             usersToReturn.innerHTML = '';
-            // setuserAvailable(users);
+            let userarr = [];
+            // Get every user in users[]
             for (let u in users) {
-                // userAvailable.forEach(object => {
-                //     object.color = '';
-                //   });
-                for (let i = 0; i < availabilities.length; i++) {
-                    if (users[u].id == availabilities[i].userId) {
-                        if (currentWeekday == availabilities[i].weekDay && availabilities[i].startTime < currentTime && currentTime < availabilities[i].endTime) {
-                            
-                            // userAvailable[u].color = 'green';
-                        }
-                        else {
-                        }
-                        
-                        console.log(users);
+
+                userarr.push({
+                    id: u,
+                    color: ''
+                })
+
+                // Get every availability in availabilities[]
+                for (let a in availabilities) {
+                    // Check if userid and user.id are the same.
+                    // Check if current and given weekday and time are the same.
+                    if (users[u].id == availabilities[a].userId && currentWeekday == availabilities[a].weekDay && availabilities[a].startTime < currentTime && currentTime < availabilities[a].endTime) {
+                        // If true: color is green.
+                        userarr[u].color = 'green';
+                    }
+                    else {
+                        // If false: color is red.
+                        userarr[u].color = 'red';
                     }
                 }
-                
-                // console.log(userAvailable[1]);
-                usersToReturn.innerHTML +=
-                    '<div>' + users[u].username + '</div>';
+
+                if (userarr[u].color == 'red') {
+                    usersToReturn.innerHTML +=
+                        '<div><img src=' + red + ' class="state" />' + users[u].username + '</div>';
+                }
+                else {
+                    usersToReturn.innerHTML +=
+                        '<div><img src=' + green + ' class="state" />' + users[u].username + '</div>';
+                }
             }
         }
     }
