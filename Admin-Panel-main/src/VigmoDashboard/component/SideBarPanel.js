@@ -144,7 +144,7 @@ const SideBarPanel = (props) => {
             for (let u in users) {
 
                 userarr.push({
-                    id: u,
+                    username: '< '+users[u].username+' />',
                     color: ''
                 })
 
@@ -157,17 +157,19 @@ const SideBarPanel = (props) => {
                         userarr[u].color = 'green';
                     }
                 }
+                // If false: color is red.
                 if(userarr[u].color != 'green'){
                     userarr[u].color = 'red';
                 }
 
+                // Check given color and add color image.
                 if (userarr[u].color == 'red') {
                     usersToReturn.innerHTML +=
-                        '<div><img src=' + red + ' class="state" />' + users[u].username + '</div>';
+                        '<div class="user"><img src=' + red + ' class="state" />' + userarr[u].username + '</div>';
                 }
                 else {
                     usersToReturn.innerHTML +=
-                        '<div><img src=' + green + ' class="state" />' + users[u].username + '</div>';
+                        '<div class="user"><img src=' + green + ' class="state" />' + userarr[u].username + '</div>';
                 }
             }
         }

@@ -1,3 +1,13 @@
+@font-face {
+    font-family: cera-pro_bold;
+    src: url(/src/VigmoDashboard/fonts/Cera\ Pro\ Bold.otf);
+}
+
+@font-face {
+    font-family: cera-pro_regular;
+    src: url(/src/VigmoDashboard/fonts/Cera\ Pro\ Regular.otf);
+}
+
 .component-sidebar {
     position: absolute;
     right: 0;
@@ -23,7 +33,13 @@
     height: 40px;
 }
 
-.state{
+.user {
+    padding: 5px;
+    font-size: 14pt;
+    font-family: cera-pro_regular;
+}
+
+.state {
     height: 20px;
     margin: 10px 20px 0px 0px;
 }
