@@ -18,6 +18,14 @@ function TextSlideTitle(props) {
         });
     }, []);
 
+    if(text.title == null){
+        return (
+            <div className="titleHeader">
+                <h1>Image</h1>
+            </div>
+        );
+    }
+
 
     if (!loaded)
     {

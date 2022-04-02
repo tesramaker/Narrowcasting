@@ -30,7 +30,7 @@ export const TextSlidesEdit = props => (
             <DateInput source="endDate" />
             <TextInput source="startTime" />
             <TextInput source="endTime" />
-            <TextInput source="title" />
+            <TextInput source="(short) title" />
             <RichTextInput source="message" />
         </SimpleForm>
     </Edit>
@@ -46,7 +46,7 @@ export const TextSlidesCreate = props => (
             <DateInput source="endDate" />
             <TextInput source="startTime" />
             <TextInput source="endTime" />
-            <TextInput source="title" />
+            <TextInput source="(short) title" />
             <RichTextInput source="message" />
         </SimpleForm>
     </Create>

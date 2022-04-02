@@ -156,7 +156,7 @@ function Slideshow(props) {
               resource = <MediaSlide api={api} path={slideObject.path} />
             } else if (slideType[0] == "text_slides")
             {
-              resource = <TextSlide fontSize={fontSizes.large} api={api} path={slideObject.path} />
+              resource = <TextSlide api={api} path={slideObject.path} />
             } else if (slideType[0] == "rss_slides")
             {
               resource = <RssSlide api={api} path={slideObject.path} />
@@ -191,7 +191,7 @@ function Slideshow(props) {
               })}
 
               <div className="tilteDot" key={1}>
-                {_.path.substr(0, 14) !== '/media_slides/' ? <TextSlideTitle fontSize={fontSizes.large} api={api} path={_.path} /> : 'Image'}
+                {<TextSlideTitle api={api} path={_.path} />}
               </div>
             </div>
           ))}

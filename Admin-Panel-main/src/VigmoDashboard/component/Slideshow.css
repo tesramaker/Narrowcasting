@@ -98,6 +98,10 @@
   padding-top: 25vh;
 }
 
+.slideContent h1 {
+  font-size: 32pt;
+}
+
 .rssWrapper > h2 {
   margin-bottom: 1px;
 }
@@ -137,18 +141,35 @@
   display: inline-block;
 }
 
+.titleHeader h1 {
+  font-size: 16pt;
+  max-height: 4vh;
+  margin-top: 18px;
+  overflow-y: hidden;
+}
+
+.textMessage {
+  font-size: 24pt;
+  max-width: 60%;
+}
+
+.textMessage a {
+  color: white;
+}
+
 .slideshowDot {
   display: inline-block;
   height: 6vh;
   width: 20vw;
   cursor: pointer;
   margin: 0 0 0 2vw;
-  background-color: #009BAA;
-  opacity: 50%;
+  background-color: #009caa2a;
+  color: #009BAA;
 }
 
 .slideshowDot.active {
-  background-color: #6a0dad;
+  background-color: #009BAA;
+  color: white;
 }
 
 .logo{
