@@ -40,3 +40,7 @@ When you click on the `Go to admin panel` button, you will be redirected to the 
 ![login-screen](docs/img/login-screen.png "Login Screen")
 
 The default username and password are what configured when setting up the API. (If you followed the installation guide they are, `admin` and `changeme`.) After logging in, its adviced that you first of all change the username and password. You can now use the project to show information on a screen. To view the information, the slides should be linked to a slideshow which should be linked to a screen. The screen provides you with an unique auth key. For instance `AdyXwfnFSBY2oN4TjubQmCE6PRnFt535`. The key can be added to the base url with a `/#!/` in the middle like so: http://localhost:3000/#!/AdyXwfnFSBY2oN4TjubQmCE6PRnFt535. It's now possible to view the slideshow.
+
+## Implement screen, slideshow and announcementbar
+
+To make sure the narrowcasting screen is shown as intended, it is necessary to create one screen and two slideshows. One slideshow is created for the actual slideshow and the other is created for the announcementbar on the bottom of the screen. For the actual slideshow it is possible to create RSS slides, media slides and text slides. For the announcementbar only text slides can be created and only the message (not the title) of the text slide is shown in the announcementbar. 
